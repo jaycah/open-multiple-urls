@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkOpener - Free URL & Keyword Tool, No Registration Required</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0071e3;
+            --secondary-color: #86868b;
+            --background-color: #f5f5f7;
+            --text-color: #1d1d1f;
+            --section-spacing: 100px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .hero, .features, .how-it-works, .testimonials, .faq {
+            padding: var(--section-spacing) 0;
+        }
+        
+        .hero {
+            background-color: var(--background-color);
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0062cc;
+            border-color: #0062cc;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-card {
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 50px 0;
+        }
+        
+        .text-area {
+            min-height: 200px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            font-size: 16px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .tool-section {
+            margin-top: -80px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .no-registration-badge {
+            background-color: #34c759;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">LinkOpener</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Tool Integrated -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <span class="no-registration-badge">No Registration Required</span>
+                    <h1 class="display-4 fw-bold mb-4">Open URLs & Search Keywords in One Click</h1>
+                    <p class="lead mb-3">Free tool - no login, no registration. Just paste your text and go!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tool Section - Moved to top -->
+    <section id="tool" class="tool-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card p-4">
+                        <h3 class="text-center mb-4">URL & Keyword Processor</h3>
+                        <div class="mb-3">
+                            <label for="inputText" class="form-label">Enter your text (URLs and keywords):</label>
+                            <textarea id="inputText" class="form-control text-area" placeholder="Paste your text here. We'll detect URLs (containing dots) and keywords (without dots)."></textarea>
+                        </div>
+                        <div class="mt-3">
+                            <div id="results" class="d-none">
+                                <h5>Results:</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6>URLs Found:</h6>
+                                        <ul id="urlsList" class="list-group"></ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6>Keywords Found:</h6>
+                                        <ul id="keywordsList" class="list-group"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                            <button id="openAllButton" class="btn btn-primary">Open All in New Tabs</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Powerful Features</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 p-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <h4>Smart URL Detection</h4>
+                            <p>Automatically identifies and extracts URLs from your text, even without http:// prefixes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 p-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h4>Keyword Search</h4>
+                            <p>Identifies non-URL text as keywords and prepares them for Google search.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 p-4">
+                        <div class="text-center">
+                            <div class="feature-icon">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                            <h4>Batch Processing</h4>
+                            <p>Process multiple URLs and keywords at once, saving you valuable time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card mb-4 p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">1</span>
+                            <h4 class="mb-0">Paste Your Text</h4>
+                        </div>
+                        <p>Simply paste any text containing URLs or keywords into the text area.</p>
+                    </div>
+                    <div class="card mb-4 p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">2</span>
+                            <h4 class="mb-0">Review the Results</h4>
+                        </div>
+                        <p>Our tool will automatically identify URLs (containing dots) and keywords (without dots).</p>
+                    </div>
+                    <div class="card p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="step-number">3</span>
+                            <h4 class="mb-0">Open in Browser</h4>
+                        </div>
+                        <p>Click "Open All in New Tabs" to open all URLs directly and search for all keywords on Google.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">What Our Users Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card testimonial-card">
+                        <p class="mb-3">"This tool has saved me so much time! I used to manually copy and paste URLs, but now I can process dozens at once."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="text-muted mb-0">Digital Marketer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card">
+                        <p class="mb-3">"The keyword search feature is brilliant. I can research multiple topics at once without having to type each search query."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-0">Michael Chen</h5>
+                                <p class="text-muted mb-0">Content Creator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card testimonial-card">
+                        <p class="mb-3">"Clean interface, fast processing, and it just works. Perfect for my daily research tasks when I need to check multiple sources."</p>
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h5 class="mb-0">Emma Rodriguez</h5>
+                                <p class="text-muted mb-0">Researcher</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How does the tool distinguish between URLs and keywords?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our tool identifies text containing dots (.) as URLs and text without dots as keywords. For example, "example.com" would be treated as a URL, while "apple products" would be treated as a keyword for search.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Do I need to include "http://" or "https://" in my URLs?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No, you don't need to include the protocol. Our tool automatically adds "https://" to URLs that don't have it. For example, if you enter "example.com", we'll open "https://example.com".
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Is there a limit to how many URLs and keywords I can process?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    There's no limit set by our tool. However, be aware that opening too many tabs simultaneously might affect your browser's performance. Most browsers have their own limits on how many tabs can be opened at once.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    How do I use the tool effectively?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <ol>
+                                        <li>Copy text containing URLs or keywords from any source</li>
+                                        <li>Paste it into the text area on our website</li>
+                                        <li>Click "Open All in New Tabs" to process everything at once</li>
+                                    </ol>
+                                    Each URL will open directly in a new tab, while keywords will be searched on Google.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Will my browser block multiple tabs from opening?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Most modern browsers have pop-up blockers that might prevent multiple tabs from opening automatically. You may need to allow pop-ups for our website in your browser settings. We also implement a slight delay between opening tabs to minimize the chance of being blocked.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>LinkOpener</h5>
+                    <p>A powerful tool to process URLs and keywords with a single click.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#features" class="text-white">Features</a></li>
+                        <li><a href="#faq" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Have questions or feedback? Reach out to us.</p>
+                    <p>Email: jay492329920@gmail.com</p>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p>&copy; 2023 LinkOpener. All rights reserved. Created by Jiang Fei.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputText = document.getElementById('inputText');
+            const results = document.getElementById('results');
+            const urlsList = document.getElementById('urlsList');
+            const keywordsList = document.getElementById('keywordsList');
+            const openAllButton = document.getElementById('openAllButton');
+            
+            let urls = [];
+            let keywords = [];
+            
+            // Process the input text directly when clicking open all
+            openAllButton.addEventListener('click', function() {
+                const text = inputText.value.trim();
+                if (!text) {
+                    alert('Please enter some text to process.');
+                    return;
+                }
+                
+                // Clear previous results
+                urlsList.innerHTML = '';
+                keywordsList.innerHTML = '';
+                urls = [];
+                keywords = [];
+                
+                // Split text by lines, spaces, commas, etc.
+                const items = text.split(/[\n\r\s,]+/).filter(item => item.trim());
+                
+                // Process each item
+                items.forEach(item => {
+                    // Clean up the item
+                    const cleanItem = item.trim().replace(/^['"]+|['"]+$/g, '');
+                    if (!cleanItem) return;
+                    
+                    // Check if it's a URL (contains a dot)
+                    if (cleanItem.includes('.')) {
+                        urls.push(cleanItem);
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item';
+                        li.textContent = cleanItem;
+                        urlsList.appendChild(li);
+                    } else {
+                        // It's a keyword
+                        keywords.push(cleanItem);
+                        const li = document.createElement('li');
+                        li.className = 'list-group-item';
+                        li.textContent = cleanItem;
+                        keywordsList.appendChild(li);
+                    }
+                });
+                
+                // Show results if we found anything
+                if (urls.length > 0 || keywords.length > 0) {
+                    results.classList.remove('d-none');
+                    
+                    // Process URLs
+                    urls.forEach((url, index) => {
+                        setTimeout(() => {
+                            let fullUrl = url;
+                            if (!url.startsWith('http')) {
+                                fullUrl = 'https://' + url;
+                            }
+                            window.open(fullUrl, '_blank');
+                        }, index * 300); // Delay to prevent browser blocking
+                    });
+                    
+                    // Process keywords
+                    keywords.forEach((keyword, index) => {
+                        setTimeout(() => {
+                            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(keyword)}`;
+                            window.open(searchUrl, '_blank');
+                        }, (urls.length + index) * 300); // Continue the delay after URLs
+                    });
+                } else {
+                    alert('No URLs or keywords found in the text.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
