@@ -139,7 +139,85 @@ module.exports = {
             safari: 'Safari：前往Safari偏好设置 > 网站 > 弹出窗口，并允许此网站',
             closeWarning: '明白了'
         },
-        // ... 其他中文翻译内容 ...
-    },
-    // 添加其他语言的翻译...
+        features: {
+            title: '功能',
+            cards: [
+                {
+                    icon: 'fa-globe',
+                    title: 'URL打开',
+                    description: '自动检测并在新标签页中打开URL。'
+                },
+                {
+                    icon: 'fa-search',
+                    title: '关键词搜索',
+                    description: '任何不含点的文本都被视为搜索关键词。'
+                },
+                {
+                    icon: 'fa-list',
+                    title: '批量处理',
+                    description: '一次处理多个URL和关键词。'
+                },
+                {
+                    icon: 'fa-language',
+                    title: '多语言支持',
+                    description: '使用您首选的语言使用我们的工具。'
+                }
+            ]
+        },
+        howItWorks: {
+            title: '工作原理',
+            steps: [
+                {
+                    title: '输入您的内容',
+                    description: '在文本框中输入或粘贴URL和关键词。'
+                },
+                {
+                    title: '点击全部处理',
+                    description: '点击"全部处理"按钮分析您的输入。'
+                },
+                {
+                    title: '自动处理',
+                    description: 'URL将直接打开，关键词将被搜索。'
+                },
+                {
+                    title: '允许弹出窗口',
+                    description: '如果您的浏览器阻止弹出窗口，请允许此网站的弹出窗口。'
+                }
+            ]
+        },
+        faq: {
+            title: '常见问题',
+            items: [
+                {
+                    question: '如何区分URL和搜索关键词？',
+                    answer: '我们的系统通过查找文本中的点(.)自动检测URL。'
+                },
+                {
+                    question: '为什么我的弹出窗口被阻止？',
+                    answer: '大多数现代浏览器默认阻止弹出窗口以保护用户。'
+                },
+                {
+                    question: '我一次可以处理多少个URL和关键词？',
+                    answer: '我们这边没有严格限制，但浏览器通常有自己的限制。'
+                }
+            ]
+        },
+        contact: {
+            title: '联系我们',
+            subtitle: '有问题或反馈？我们很乐意听取您的意见！'
+        },
+        footer: {
+            tagline: '高效打开URL和搜索关键词',
+            quickLinks: '快速链接',
+            features: '功能',
+            howItWorks: '工作原理',
+            faq: '常见问题',
+            contact: '联系我们',
+            stayUpdated: '保持更新',
+            subscribeText: '订阅我们的通讯以获取更新和新功能。',
+            emailPlaceholder: '您的邮箱',
+            subscribe: '订阅',
+            copyright: '© 2025 OpenMultipleURLs。保留所有权利。'
+        }
+    }
 };

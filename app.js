@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // 设置视图引擎
 app.set('view engine', 'ejs');
@@ -25,6 +25,7 @@ const availableLanguages = [
 const translations = require('./translations');
 
 // 路由
+// 在路由处理中确保translations对象正确传递
 app.get('/', (req, res) => {
     // 获取用户语言偏好
     const userLocale = req.query.lang || req.headers['accept-language']?.split(',')[0]?.split('-')[0] || 'en';
@@ -32,10 +33,18 @@ app.get('/', (req, res) => {
     // 确保我们支持该语言，否则默认为英语
     const locale = availableLanguages.some(lang => lang.code === userLocale) ? userLocale : 'en';
     
+    // 添加调试日志
+    console.log('Locale:', locale);
+    console.log('Available translations:', Object.keys(translations));
+    console.log('Translation structure:', JSON.stringify(translations[locale]?.features || 'undefined'));
+    
+    // 确保translations[locale]存在
+    const translationData = translations[locale] || translations['en'];
+    
     res.render('index', {
         locale,
         availableLanguages,
-        translations: translations[locale]
+        translations: translationData
     });
 });
 
