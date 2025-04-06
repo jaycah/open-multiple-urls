@@ -1,0 +1,54 @@
+<<<<<<< HEAD
+{
+  "name": "multi-url-opener",
+  "version": "1.0.0",
+  "description": "Open multiple URLs and search keywords effortlessly",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "url",
+    "opener",
+    "search",
+    "keywords",
+    "multi-language"
+  ],
+  "author": "Jiang Fei",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+=======
+{
+  "name": "multi-url-opener",
+  "version": "1.0.0",
+  "description": "Open multiple URLs and search keywords effortlessly",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "url",
+    "opener",
+    "search",
+    "keywords",
+    "multi-language"
+  ],
+  "author": "Jiang Fei",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+>>>>>>> ef6c376c80f5e89c35b60cdf19bcf037e7e61890
+}

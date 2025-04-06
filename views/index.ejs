@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="<%= locale %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= translations.meta.title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="<%= translations.meta.description %>">
+    <link rel="canonical" href="https://jiangfei.xyz/">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><%= translations.header.logo %></a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#features"><%= translations.header.features %></a></li>
+                    <li><a href="#how-it-works"><%= translations.header.howItWorks %></a></li>
+                    <li><a href="#faq"><%= translations.header.faq %></a></li>
+                    <li><a href="#contact"><%= translations.header.contact %></a></li>
+                </ul>
+                <div class="language-selector">
+                    <select id="language-select" onchange="changeLanguage(this.value)">
+                        <% availableLanguages.forEach(function(lang) { %>
+                            <option value="<%= lang.code %>" <%= lang.code === locale ? 'selected' : '' %>><%= lang.name %></option>
+                        <% }); %>
+                    </select>
+                </div>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><%= translations.hero.title %></h1>
+                <p><%= translations.hero.subtitle %></p>
+            </div>
+            <div class="input-container">
+                <textarea id="input-text" placeholder="<%= translations.hero.placeholder %>"></textarea>
+                <div class="button-container">
+                    <button id="submit-btn"><%= translations.hero.button %></button>
+                </div>
+                <div id="popup-warning" class="popup-warning hidden">
+                    <div class="warning-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <p><%= translations.hero.popupWarning %></p>
+                    <div class="instructions">
+                        <p><%= translations.hero.popupInstructions %></p>
+                        <ul>
+                            <li><%= translations.hero.chrome %></li>
+                            <li><%= translations.hero.firefox %></li>
+                            <li><%= translations.hero.edge %></li>
+                            <li><%= translations.hero.safari %></li>
+                        </ul>
+                        <button id="close-warning"><%= translations.hero.closeWarning %></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2><%= translations.features.title %></h2>
+            <div class="features-grid">
+                <% translations.features.cards.forEach(function(card) { %>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas <%= card.icon %>"></i>
+                    </div>
+                    <h3><%= card.title %></h3>
+                    <p><%= card.description %></p>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2><%= translations.howItWorks.title %></h2>
+            <div class="steps">
+                <% translations.howItWorks.steps.forEach(function(step, index) { %>
+                <div class="step">
+                    <div class="step-number"><%= index + 1 %></div>
+                    <div class="step-content">
+                        <h3><%= step.title %></h3>
+                        <p><%= step.description %></p>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2><%= translations.faq.title %></h2>
+            <div class="faq-container">
+                <% translations.faq.items.forEach(function(item) { %>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><%= item.question %></h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><%= item.answer %></p>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2><%= translations.contact.title %></h2>
+            <p><%= translations.contact.subtitle %></p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>jay492329920@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>MultiOpen</h3>
+                    <p><%= translations.footer.tagline %></p>
+                </div>
+                <div class="footer-links">
+                    <h4><%= translations.footer.quickLinks %></h4>
+                    <ul>
+                        <li><a href="#features"><%= translations.footer.features %></a></li>
+                        <li><a href="#how-it-works"><%= translations.footer.howItWorks %></a></li>
+                        <li><a href="#faq"><%= translations.footer.faq %></a></li>
+                        <li><a href="#contact"><%= translations.footer.contact %></a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4><%= translations.footer.stayUpdated %></h4>
+                    <p><%= translations.footer.subscribeText %></p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="<%= translations.footer.emailPlaceholder %>" required>
+                        <button type="submit"><%= translations.footer.subscribe %></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p><%= translations.footer.copyright %></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script>
+        // 初始化语言
+        const currentLocale = '<%= locale %>';
+    </script>
+</body>
+</html>
