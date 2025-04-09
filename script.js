@@ -112,4 +112,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // 目前简单返回默认文本
         return defaultText;
     }
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputText = document.getElementById('input-text');
+        inputText.placeholder = `Enter URLs or keywords - one per line or separated by spaces
+    Example:
+    WoWkie Da,ishowspeed
+    apple stock
+    jiangfei.xyz, twitter.com
+    tariffs`;
+    });
 });
