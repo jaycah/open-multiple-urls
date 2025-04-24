@@ -113,111 +113,69 @@ module.exports = {
             copyright: '© 2025 OpenMultipleURLs. All rights reserved. Created by Jiang Fei.'
         }
     },
-    // 中文翻译
-    zh: {
+    hi: {
         meta: {
-            title: '免登录打开多个URL和关键词',
-            description: '无需注册即可轻松打开多个URL和搜索关键词。尝试我们的工具进行即时标签处理，现在支持多语言！'
+            title: 'बिना लॉगिन के कई URL और कीवर्ड खोलें',
+            description: 'बिना पंजीकरण के कई URL और खोज कीवर्ड आसानी से खोलें।'
         },
         header: {
-            logo: '打开所有URL',
-            features: '功能',
-            howItWorks: '工作原理',
-            faq: '常见问题',
-            contact: '联系我们'
+            logo: 'सभी URL खोलें',
+            features: 'विशेषताएं',
+            howItWorks: 'यह कैसे काम करता है',
+            faq: 'सामान्य प्रश्न',
+            contact: 'संपर्क करें'
+        }
+    },
+    pa: {
+        meta: {
+            title: 'ਲਾਗਿਨ ਤੋਂ ਬਿਨਾਂ ਕਈ URL ਅਤੇ ਕੀਵਰਡ ਖੋਲ੍ਹੋ',
+            description: 'ਬਿਨਾਂ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੇ ਕਈ URL ਅਤੇ ਖੋਜ ਕੀਵਰਡ ਆਸਾਨੀ ਨਾਲ ਖੋਲ੍ਹੋ।'
         },
-        hero: {
-            title: '打开多个URL或搜索关键词',
-            subtitle: '在下面的框中输入URL和关键词。URL将直接打开，关键词将在Google中搜索。',
-            placeholder: '输入URL或关键词 - 每行一个或用逗号分隔\n示例：\ngoogle.com\napple news\nfacebook.com, twitter.com\nclimate change',
-            button: '全部处理',
-            popupWarning: '检测到弹出窗口被阻止！请允许此网站的弹出窗口以使用所有功能。',
-            popupInstructions: '如何启用弹出窗口：',
-            chrome: 'Chrome：点击地址栏中的阻止弹出窗口图标，选择"始终允许来自此网站的弹出窗口"',
-            firefox: 'Firefox：点击弹出窗口警告中的"选项"，选择"允许此网站的弹出窗口"',
-            edge: 'Edge：点击弹出窗口警告中的"设置"，选择"始终允许"',
-            safari: 'Safari：前往Safari偏好设置 > 网站 > 弹出窗口，并允许此网站',
-            closeWarning: '明白了'
+        header: {
+            logo: 'ਸਾਰੇ URL ਖੋਲ੍ਹੋ',
+            features: 'ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ',
+            howItWorks: 'ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ',
+            faq: 'ਆਮ ਸਵਾਲ',
+            contact: 'ਸੰਪਰਕ ਕਰੋ'
+        }
+    },
+    bn: {
+        meta: {
+            title: 'লগইন ছাড়াই একাধিক URL এবং কীওয়ার্ড খুলুন',
+            description: 'নিবন্ধন ছাড়াই সহজে একাধিক URL এবং অনুসন্ধান কীওয়ার্ড খুলুন।'
         },
-        features: {
-            title: '功能',
-            cards: [
-                {
-                    icon: 'fa-globe',
-                    title: 'URL打开',
-                    description: '自动检测并在新标签页中打开URL。'
-                },
-                {
-                    icon: 'fa-search',
-                    title: '关键词搜索',
-                    description: '任何不含点的文本都被视为搜索关键词。'
-                },
-                {
-                    icon: 'fa-list',
-                    title: '批量处理',
-                    description: '一次处理多个URL和关键词。'
-                },
-                {
-                    icon: 'fa-language',
-                    title: '多语言支持',
-                    description: '使用您首选的语言使用我们的工具。'
-                }
-            ]
+        header: {
+            logo: 'সমস্ত URL খুলুন',
+            features: 'বৈশিষ্ট্য',
+            howItWorks: 'কিভাবে কাজ করে',
+            faq: 'সাধারণ প্রশ্ন',
+            contact: 'যোগাযোগ'
+        }
+    },
+    id: {
+        meta: {
+            title: 'Buka Beberapa URL dan Kata Kunci Tanpa Login',
+            description: 'Buka beberapa URL dan kata kunci pencarian dengan mudah tanpa pendaftaran.'
         },
-        howItWorks: {
-            title: '工作原理',
-            steps: [
-                {
-                    title: '输入您的内容',
-                    description: '在文本框中输入或粘贴URL和关键词。'
-                },
-                {
-                    title: '点击全部处理',
-                    description: '点击"全部处理"按钮分析您的输入。'
-                },
-                {
-                    title: '自动处理',
-                    description: 'URL将直接打开，关键词将被搜索。'
-                },
-                {
-                    title: '允许弹出窗口',
-                    description: '如果您的浏览器阻止弹出窗口，请允许此网站的弹出窗口。'
-                }
-            ]
+        header: {
+            logo: 'Buka Semua URL',
+            features: 'Fitur',
+            howItWorks: 'Cara Kerja',
+            faq: 'FAQ',
+            contact: 'Kontak'
+        }
+    },
+    th: {
+        meta: {
+            title: 'เปิดหลาย URL และคำค้นหาโดยไม่ต้องเข้าสู่ระบบ',
+            description: 'เปิดหลาย URL และคำค้นหาได้อย่างง่ายดายโดยไม่ต้องลงทะเบียน'
         },
-        faq: {
-            title: '常见问题',
-            items: [
-                {
-                    question: '如何区分URL和搜索关键词？',
-                    answer: '我们的系统通过查找文本中的点(.)自动检测URL。'
-                },
-                {
-                    question: '为什么我的弹出窗口被阻止？',
-                    answer: '大多数现代浏览器默认阻止弹出窗口以保护用户。'
-                },
-                {
-                    question: '我一次可以处理多少个URL和关键词？',
-                    answer: '我们这边没有严格限制，但浏览器通常有自己的限制。'
-                }
-            ]
-        },
-        contact: {
-            title: '联系我们',
-            subtitle: '有问题或反馈？我们很乐意听取您的意见！'
-        },
-        footer: {
-            tagline: '高效打开URL和搜索关键词',
-            quickLinks: '快速链接',
-            features: '功能',
-            howItWorks: '工作原理',
-            faq: '常见问题',
-            contact: '联系我们',
-            stayUpdated: '保持更新',
-            subscribeText: '订阅我们的通讯以获取更新和新功能。',
-            emailPlaceholder: '您的邮箱',
-            subscribe: '订阅',
-            copyright: '© 2025 OpenMultipleURLs。保留所有权利。'
+        header: {
+            logo: 'เปิดทุก URL',
+            features: 'คุณสมบัติ',
+            howItWorks: 'วิธีการทำงาน',
+            faq: 'คำถามที่พบบ่อย',
+            contact: 'ติดต่อ'
         }
     }
 };
