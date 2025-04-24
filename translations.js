@@ -154,12 +154,12 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'बल्क प्रोसेसिंग',
-                    description: 'एक साथ कई URL और कीवर्ड प्रोसेस करें।'
+                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
                 },
                 {
                     icon: 'fa-language',
-                    title: 'बहुभाषी समर्थन',
-                    description: 'अपनी पसंदीदा भाषा में हमारा टूल उपयोग करें।'
+                    title: 'बहु-भाषी समर्थन',
+                    description: 'Use our tool in your preferred language with support for English, French, German, Italian, Korean, Japanese, and Chinese.'
                 }
             ]
         },
@@ -189,29 +189,21 @@ module.exports = {
             items: [
                 {
                     question: 'मैं URL और खोज कीवर्ड में अंतर कैसे करूं?',
-                    answer: 'हमारा सिस्टम डॉट (.) वाले टेक्स्ट को URL के रूप में पहचानता है।'
+                    answer: 'हमारा सिस्टम डॉट (.) वाले टेक्स्ट को URL के रूप में पहचानता है। यदि आपके टेक्स्ट में डॉट है, तो इसे URL माना जाएगा और सीधे खोला जाएगा। यदि डॉट नहीं है, तो इसे खोज कीवर्ड माना जाएगा और Google पर खोजा जाएगा।'
                 },
                 {
                     question: 'मेरे पॉप-अप क्यों ब्लॉक हो रहे हैं?',
-                    answer: 'अधिकांश आधुनिक ब्राउज़र डिफ़ॉल्ट रूप से पॉप-अप को ब्लॉक करते हैं।'
+                    answer: 'अधिकांश आधुनिक ब्राउज़र उपयोगकर्ताओं को अवांछित सामग्री से बचाने के लिए डिफ़ॉल्ट रूप से पॉप-अप को ब्लॉक करते हैं। चूंकि हमारे टूल को कई टैब खोलने की आवश्यकता होती है, इसलिए आपको हमारी साइट के लिए पॉप-अप की अनुमति देनी होगी। जब आप पॉप-अप ब्लॉकर नोटिफिकेशन देखें, तो उस पर क्लिक करें और हमारी साइट से पॉप-अप की अनुमति देने का विकल्प चुनें। हमने चेतावनी संदेश में विभिन्न ब्राउज़र के लिए विस्तृत निर्देश प्रदान किए हैं।'
                 },
                 {
                     question: 'मैं एक बार में कितने URL और कीवर्ड प्रोसेस कर सकता हूं?',
-                    answer: 'हमारी तरफ से कोई सख्त सीमा नहीं है, लेकिन ब्राउज़र की अपनी सीमाएं होती हैं।'
-                },
-                {
-                    question: 'Do I need to include "http://" or "https://" in my URLs?',
-                    answer: 'No, you don\'t need to include the protocol. Simply entering "example.com" is sufficient. Our system will automatically add "https://" to ensure secure connections. However, if you specifically want to use "http://", you can include it in your input.'
-                },
-                {
-                    question: 'Can I use this tool on mobile devices?',
-                    answer: 'Yes, our tool is fully responsive and works on mobile devices. However, the experience may vary depending on your mobile browser\'s handling of multiple tabs. Some mobile browsers might open new tabs in the background or have different ways of managing multiple tabs.'
+                    answer: 'आमादें दिशा में कोई कठोर सीमा नहीं है, लेकिन ब्राउज़र की अपनी सीमाएं होती हैं। सर्वोत्तम प्रदर्शन के लिए, हम एक बार में 10-15 आइटम प्रोसेस करने की सलाह देते हैं। यदि आपको अधिक प्रोसेस करने की आवश्यकता है, तो आप इसे बैचों में कर सकते हैं।'
                 }
             ]
         },
         contact: {
             title: 'संपर्क करें',
-            subtitle: 'प्रश्न या प्रतिक्रिया है? हम आपसे सुनना पसंद करेंगे!'
+            subtitle: 'प्रश्न या प्रतिक्रिया है? असीं तुहाडे तों सुनना पसंद करेंगे!'
         },
         footer: {
             tagline: 'URL और खोज कीवर्ड कुशलतापूर्वक खोलें',
@@ -268,7 +260,7 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'ਬਲਕ ਪ੍ਰੋਸੈਸਿੰਗ',
-                    description: 'ਇੱਕੋ ਵਾਰ ਕਈ URL ਅਤੇ ਕੀਵਰਡ ਪ੍ਰੋਸੈਸ ਕਰੋ।'
+                    description: 'ਇੱਕ ਸਾਥੇ ਕਈ URL ਅਤੇ ਕੀਵਰਡ ਪ੍ਰੋਸੈਸ ਕਰੋ।'
                 },
                 {
                     icon: 'fa-language',
@@ -282,7 +274,7 @@ module.exports = {
             steps: [
                 {
                     title: 'ਆਪਣੀ ਸਮੱਗਰੀ ਦਾਖਲ ਕਰੋ',
-                    description: 'ਟੈਕਸਟ ਬॉक्स ਵਿੱਚ URL ਅਤੇ ਕੀਵਰਡ ਟਾਈਪ ਕਰੋ ਜਾਂ ਪੇਸਟ ਕਰੋ।'
+                    description: 'ਟেਕਸਟ ਬॉक्स ਵਿੱਚ URL ਅਤੇ ਕੀਵਰਡ ਟਾਈਪ ਕਰੋ ਜਾਂ ਪੇਸਟ ਕਰੋ।'
                 },
                 {
                     title: 'ਪ੍ਰੋਸੈਸ ਆਲ ਤੇ ਕਲਿੱਕ ਕਰੋ',
@@ -302,25 +294,25 @@ module.exports = {
             title: 'ਆਮ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ',
             items: [
                 {
-                    question: 'ਮੈਂ URL ਅਤੇ ਖੋਜ ਕੀਵਰਡ ਵਿੱਚ ਫਰਕ ਕਿਵੇਂ ਕਰਾਂ?',
+                    question: 'ਮੈਂ URL ਅਤੇ ਅਨੁਸ਼ਧਾਨ ਕੀਵਰਡ ਕਿਵੇਂ ਆਲਾਂ ਅਤਰਾਂ?',
                     answer: 'ਸਾਡਾ ਸਿਸਟਮ ਡੌਟ (.) ਵਾਲੇ ਟੈਕਸਟ ਨੂੰ URL ਵਜੋਂ ਪਛਾਣਦਾ ਹੈ।'
                 },
                 {
-                    question: 'ਮੇਰੇ ਪੌਪ-ਅੱਪ ਕਿ ਬਲੌਕ ਹੋ ਰਹੇ ਹਨ?',
-                    answer: 'ਜ਼ਿਆਦਾਤਰ ਆਧੁਨਿਕ ਬ੍ਰਾਊਜ਼ਰ ਡਿਫੌਲਟ ਰੂਪ ਵਿੱਚ ਪੌਪ-ਅੱਪ ਨੂੰ ਬਲੌਕ ਕਰਦੇ ਹਨ।'
+                    question: 'ਮੇਰੇ ਪੌਪ-ਅੱਪ ਕਿਂ ਬਲੌਕ ਹੋ ਰਹੇ ਹਨ?',
+                    answer: 'ਜ਼ਿਆਦਾਤਰ ਆਧੁਨਿਕ ਬ੍ਰਾਊਜ਼ਰ ਉਪਯਾਤਾਕਰਤਾਰ ਕਾਰਣੇ ਪੌਪ-ਅੱਪ ਬਲੌਕ ਕਰਦੇ ਹਨ।'
                 },
                 {
                     question: 'ਮੈਂ ਇੱਕ ਵਾਰ ਵਿੱਚ ਕਿੰਨੇ URL ਅਤੇ ਕੀਵਰਡ ਪ੍ਰੋਸੈਸ ਕਰ ਸਕਦਾ ਹਾਂ?',
-                    answer: 'ਸਾਡੇ ਵੱਲੋਂ ਕੋਈ ਸਖ਼ਤ ਸੀਮਾ ਨਹੀਂ ਹੈ, ਪਰ ਬ੍ਰਾਊਜ਼ਰ ਦੀਆਂ ਆਪਣੀਆਂ ਸੀਮਾਵਾਂ ਹੁੰਦੀਆਂ ਹਨ।'
+                    answer: 'ਆਮਾਂ ਦੇਸ਼ਾ ਨੂੰ ਕੋਈ ਸਖ਼ਤ ਸੀਮਾ ਨਹੀਂ ਹੈ, ਪਰ ਬ੍ਰਾਊਜ਼ਰ ਦੀਆਂ ਆਪਣੀਆਂ ਸੀਮਾਵਾਂ ਹੁੰਦੀਆਂ ਹਨ।'
                 }
             ]
         },
         contact: {
             title: 'ਸੰਪਰਕ ਕਰੋ',
-            subtitle: 'ਪ੍ਰਸ਼ਨ ਜਾਂ ਪ੍ਰਤਿਕ੍ਰਿਯਾ ਹੈ? ਅਸੀਂ ਤੁਹਾਡੇ ਤੋਂ ਸੁਣਨਾ ਪਸੰਦ ਕਰਾਂਗੇ!'
+            subtitle: 'ਪ੍ਰਸ਼ਨ ਜਾਂ ਪ੍ਰਤਿਕ੍ਰਿਯਾ ਹੈ? ਅਸੀਂ ਤੁਹਾਰ ਕਾਛ ਥੇਕੇ ਸੁਣਨਾ ਪਸੰਦ ਕਰਾਂਗੇ!'
         },
         footer: {
-            tagline: 'URL ਅਤੇ ਖੋਜ ਕੀਵਰਡ ਕੁਸ਼ਲਤਾ ਨਾਲ ਖੋਲ੍ਹੋ',
+            tagline: 'URL ਅਤੇ ਅਨੁਸ਼ਧਾਨ ਕੀਵਰਡ ਕੁਸ਼ਲਤਾ ਨਾਲ ਖੋਲ੍ਹੋ',
             quickLinks: 'ਤੇਜ਼ ਲਿੰਕ',
             features: 'ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ',
             howItWorks: 'ਇਹ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ',
@@ -328,9 +320,9 @@ module.exports = {
             contact: 'ਸੰਪਰਕ ਕਰੋ',
             stayUpdated: 'ਅੱਪਡੇਟ ਰਹੋ',
             subscribeText: 'ਅੱਪਡੇਟ ਅਤੇ ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਲਈ ਸਾਡੇ ਨਿਊਜ਼ਲੈਟਰ ਦੀ ਸਦੱਸਤਾ ਲਓ।',
-            emailPlaceholder: 'ਤੁਹਾਡਾ ਈਮੇਲ',
+            emailPlaceholder: 'ਤੁਹਾਰ ਈਮੇਲ',
             subscribe: 'ਸਦੱਸਤਾ ਲਓ',
-            copyright: '© 2025 OpenMultipleURLs. ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।'
+            copyright: '© 2025 OpenMultipleURLs। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।'
         }
     },
     bn: {
@@ -355,7 +347,7 @@ module.exports = {
             chrome: 'Chrome: ঠিকানা বারে ব্লক করা পপ-আপ আইকনে ক্লিক করুন এবং "এই সাইট থেকে সবসময় পপ-আপ অনুমতি দিন" নির্বাচন করুন',
             firefox: 'Firefox: পপ-আপ সতর্কতায় "অপশন" এ ক্লিক করুন এবং "এই সাইট লিএ পপ-আপ অনুমতি দিন" নির্বাচন করুন',
             edge: 'Edge: পপ-আপ সতর্কতায় "সেটিংস" এ ক্লিক করুন এবং "সবসময় অনুমতি দিন" নির্বাচন করুন',
-            safari: 'Safari: Safari পছন্দ > ওয়েবসাইট > পপ-আপ উইন্ডো তে যান এবং এই সাইটের জন্য অনুমতি দিন',
+            safari: 'Safari: Safari পছন্দ > ওয়েবসাইট > পপ-আপ উইন্ডো তে যান এবং এই সাইট লিএ অনুমতি দিন',
             closeWarning: 'বুঝেছি'
         },
         features: {
@@ -363,23 +355,23 @@ module.exports = {
             cards: [
                 {
                     icon: 'fa-globe',
-                    title: 'URL খোলা',
-                    description: 'স্বয়ংক্রিয়ভাবে URL শনাক্ত করে এবং নতুন ট্যাবে খোলে।'
+                    title: 'URL খੋলা',
+                    description: 'স্বয়ংক্রিয়ভাবে URL শনাক্ত করে এবং নতুন ট্যাবে খੋলে।'
                 },
                 {
                     icon: 'fa-search',
                     title: 'কীওয়ার্ড অনুসন্ধান',
-                    description: 'ডট ছাড়া যেকোনো টেক্সট অনুসন্ধান কীওয়ার্ড হিসেবে বিবেচিত হবে।'
+                    description: 'বিনাডট যেকোনো টেক্সট খোজ কীওয়ার্ড হিসেবে বিবেচিত হবে।'
                 },
                 {
                     icon: 'fa-list',
                     title: 'বাল্ক প্রক্রিয়াকরণ',
-                    description: 'একসাথে অনেক URL এবং কীওয়ার্ড প্রক্রিয়া করুন।'
+                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
                 },
                 {
                     icon: 'fa-language',
                     title: 'বহু-ভাষা সমর্থন',
-                    description: 'আপনার পছন্দের ভাষায় আমাদের টুল ব্যবহার করুন।'
+                    description: 'Use our tool in your preferred language with support for English, French, German, Italian, Korean, Japanese, and Chinese.'
                 }
             ]
         },
@@ -408,16 +400,16 @@ module.exports = {
             title: 'সচরাচর জিজ্ঞাসিত প্রশ্ন',
             items: [
                 {
-                    question: 'আমি কীভাবে URL এবং অনুসন্ধান কীওয়ার্ড পার্থক্য করব?',
-                    answer: 'আমাদের সিস্টেম ডট (.) থাকা টেক্সটকে URL হিসেবে শনাক্ত করে।'
+                    question: 'আমি URL এবং অনুসন্ধান কীওয়ার্ড কীভাবে আলাদা করব?',
+                    answer: 'আমাদের সিস্টেম ডট (.) থাকা টেক্সটকে URL হিসেবে শনাক্ত করে। যদি আপনার টেক্সটে ডট থাকে, তাহলে এটিকে URL হিসেবে বিবেচনা করা হবে এবং সরাসরি খোলা হবে। যদি ডট না থাকে, তাহলে এটিকে খোঁজ কীওয়ার্ড হিসেবে বিবেচনা করা হবে এবং Google-এ খোঁজা হবে।'
                 },
                 {
-                    question: 'মেরে পপ-আপ কেন ব্লক করা হচ্ছে?',
-                    answer: 'বেশিরভাগ আধুনিক ব্রাউজার ডিফল্টভাবে পপ-আপ ব্লক করে।'
+                    question: 'আমার পপ-আপ কেন ব্লক করা হচ্ছে?',
+                    answer: 'বেশিরভাগ আধুনিক ব্রাউজার অবাঞ্ছিত কন্টেন্ট থেকে ব্যবহারকারীদের রক্ষা করার জন্য ডিফল্টভাবে পপ-আপ ব্লক করে। যেহেতু আমাদের টুলের একাধিক ট্যাব খোলার প্রয়োজন হয়, তাই আপনাকে আমাদের সাইটের জন্য পপ-আপ অনুমতি দিতে হবে। যখন আপনি পপ-আপ ব্লকার নোটিফিকেশন দেখবেন, তখন সেটিতে ক্লিক করুন এবং আমাদের সাইট থেকে পপ-আপের অনুমতি দেওয়ার অপশন নির্বাচন করুন। আমরা সতর্কতা বার্তায় বিভিন্ন ব্রাউজারের জন্য বিস্তারিত নির্দেশনা প্রদান করেছি।'
                 },
                 {
                     question: 'আমি একসাথে কতগুলি URL এবং কীওয়ার্ড প্রক্রিয়া করতে পারি?',
-                    answer: 'আমাদের দিক থেকে কোন কঠোর সীমা নেই, তবে ব্রাউজারের নিজস্ব সীমা আছে।'
+                    answer: 'আমাদের দিক থেকে কোন কঠোর সীমা নেই, তবে ব্রাউজারের নিজস্ব সীমা আছে। সর্বোত্তম কার্যক্ষমতার জন্য, আমরা একবারে 10-15টি আইটেম প্রক্রিয়া করার পরামর্শ দিই। যদি আপনার আরও প্রক্রিয়া করার প্রয়োজন হয়, তাহলে আপনি এটি ব্যাচে করতে পারেন।'
                 }
             ]
         },
@@ -434,8 +426,8 @@ module.exports = {
             contact: 'যোগাযোগ',
             stayUpdated: 'আপডেট থাকুন',
             subscribeText: 'আপডেট এবং নতুন বৈশিষ্ট্যের জন্য আমাদের নিউজলেটার সাবস্ক্রাইব করুন।',
-            emailPlaceholder: 'আপনার ইমেইল',
-            subscribe: 'সাবস্ক্রাইব',
+            emailPlaceholder: 'আপনার ইমেਲ',
+            subscribe: 'সদস্যতা লও',
             copyright: '© 2025 OpenMultipleURLs। সর্বস্বত্ব সংরক্ষিত।'
         }
     },
@@ -459,8 +451,8 @@ module.exports = {
             popupWarning: 'Pop-up terdeteksi diblokir! Harap izinkan pop-up untuk situs ini untuk menggunakan semua fitur.',
             popupInstructions: 'Cara mengaktifkan pop-up:',
             chrome: 'Chrome: Klik ikon pop-up yang diblokir di bilah alamat dan pilih "Selalu izinkan pop-up dari situs ini"',
-            firefox: 'Firefox: Klik "Opsi" di peringatan pop-up dan pilih "Izinkan pop-up untuk situs ini"',
-            edge: 'Edge: Klik "Pengaturan" di peringatan pop-up dan pilih "Selalu izinkan"',
+            firefox: 'Firefox: Klik "Opsi" di peringatan pop-up dan choose "Izinkan pop-up untuk situs ini"',
+            edge: 'Edge: Klik "Pengaturan" di peringatan pop-up dan select "Always allow"',
             safari: 'Safari: Buka Preferensi Safari > Situs Web > Jendela Pop-up dan izinkan untuk situs ini',
             closeWarning: 'Mengerti'
         },
@@ -480,7 +472,7 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'Pemrosesan Massal',
-                    description: 'Proses beberapa URL dan kata kunci sekaligus.'
+                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
                 },
                 {
                     icon: 'fa-language',
@@ -567,7 +559,7 @@ module.exports = {
             chrome: 'Chrome: คลิกไอคอนป๊อปอัพที่ถูกบล็อกในแถบที่อยู่และเลือก "อนุญาตป๊อปอัพจากเว็บไซต์นี้เสมอ"',
             firefox: 'Firefox: คลิก "ตัวเลือก" ในการแจ้งเตือนป๊อปอัพและเลือก "อนุญาตป๊อปอัพสำหรับเว็บไซต์นี้"',
             edge: 'Edge: คลิก "การตั้งค่า" ในการแจ้งเตือนป๊อปอัพและเลือก "อนุญาตเสมอ"',
-            safari: 'Safari: ไปที่การตั้งค่า Safari > เว็บไซต์ > หน้าต่างป๊อปอัพ และอนุญาตสำหรับเว็บไซต์นี้',
+            safari: 'Safari: Safari ความชอบ > เว็บไซต์ > หน้าต่างป๊อปอัพ และอนุญาตสำหรับเว็บไซต์นี้',
             closeWarning: 'เข้าใจแล้ว'
         },
         features: {
@@ -586,7 +578,7 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'การประมวลผลจำนวนมาก',
-                    description: 'ประมวลผลหลาย URL และคำค้นหาพร้อมกัน'
+                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
                 },
                 {
                     icon: 'fa-language',
@@ -599,20 +591,20 @@ module.exports = {
             title: 'วิธีการทำงาน',
             steps: [
                 {
-                    title: 'ป้อนเนื้อหาของคุณ',
-                    description: 'พิมพ์หรือวาง URL และคำค้นหาลงในกล่องข้อความ'
+                    title: 'Masukkan Konten Anda',
+                    description: 'Ketik atau tempel URL dan kata kunci ke dalam kotak teks.'
                 },
                 {
-                    title: 'คลิกประมวลผลทั้งหมด',
-                    description: 'คลิกปุ่ม "ประมวลผลทั้งหมด" เพื่อเริ่มต้น'
+                    title: 'Klik Proses Semua',
+                    description: 'Klik tombol "Proses Semua" untuk memulai.'
                 },
                 {
-                    title: 'การประมวลผลอัตโนมัติ',
-                    description: 'URL จะเปิดโดยตรง คำค้นหาจะถูกค้นหา'
+                    title: 'Pemrosesan Otomatis',
+                    description: 'URL akan dibuka langsung, kata kunci akan dicari.'
                 },
                 {
-                    title: 'อนุญาตป๊อปอัพ',
-                    description: 'หากเบราว์เซอร์ของคุณบล็อกป๊อปอัพ ให้อนุญาตสำหรับเว็บไซต์นี้'
+                    title: 'Izinkan Pop-up',
+                    description: 'Jika browser Anda memblokir pop-up, izinkan untuk situs ini.'
                 }
             ]
         },
@@ -621,15 +613,15 @@ module.exports = {
             items: [
                 {
                     question: 'ฉันจะแยกแยะระหว่าง URL และคำค้นหาได้อย่างไร?',
-                    answer: 'ระบบของเราตรวจจับ URL โดยมองหาจุด (.) ในข้อความ'
+                    answer: 'ระบบของเราได้ตรวจจับ URL โดยมองหาจุด (.) ในข้อความ'
                 },
                 {
                     question: 'ทำไมป๊อปอัพของฉันถูกบล็อก?',
-                    answer: 'เบราว์เซอร์ส่วนใหญ่บล็อกป๊อปอัพโดยค่าเริ่มต้น'
+                    answer: 'บราว์เซอร์ส่วนใหญ่บล็อกป๊อปอัพโดยค่าเริ่มต้น'
                 },
                 {
                     question: 'ฉันสามารถประมวลผล URL และคำค้นหาได้กี่รายการในครั้งเดียว?',
-                    answer: 'ไม่มีข้อจำกัดที่เข้มงวดจากเรา แต่เบราว์เซอร์มีข้อจำกัดของตัวเอง'
+                    answer: 'ไม่มีข้อจำกัดที่เข้มงวดจากเรา แต่บราว์เซอร์มีข้อจำกัดของตัวเอง'
                 }
             ]
         },
