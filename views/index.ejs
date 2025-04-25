@@ -24,21 +24,6 @@
     <% }); %>
 </head>
 <body>
-    <!-- 语言选择器 - 添加到顶部导航 -->
-    <div class="language-selector">
-        <button class="language-dropdown-btn">
-            <% const currentLang = availableLanguages.find(l => l.code === locale); %>
-            <%= currentLang ? currentLang.name : 'English' %> <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="language-dropdown-content">
-            <% availableLanguages.forEach(function(lang) { %>
-                <a href="/change-language/<%= lang.code %>" <%= lang.code === locale ? 'class="active"' : '' %>>
-                    <%= lang.name %>
-                </a>
-            <% }); %>
-        </div>
-    </div>
-
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -53,6 +38,22 @@
                     <li><a href="#contact"><%= translations.header.contact %></a></li>
                 </ul>
             </nav>
+            <!-- 将语言选择器添加到导航中 -->
+            <div class="language-selector">
+                <button class="language-dropdown-btn">
+                    <i class="fas fa-globe"></i>
+                    <% const currentLang = availableLanguages.find(l => l.code === locale); %>
+                    <span><%= currentLang ? currentLang.name : 'English' %></span> 
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="language-dropdown-content">
+                    <% availableLanguages.forEach(function(lang) { %>
+                        <a href="/change-language/<%= lang.code %>" <%= lang.code === locale ? 'class="active"' : '' %>>
+                            <%= lang.name %>
+                        </a>
+                    <% }); %>
+                </div>
+            </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -201,60 +202,249 @@
     <style>
         .language-selector {
             position: relative;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            margin-left: 15px;
         }
         
         .language-dropdown-btn {
-            background-color: #f8f9fa;
-            color: #212529;
-            padding: 8px 16px;
+            background-color: #4a6cf7;
+            color: white;
+            padding: 10px 15px;
             border: none;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .language-dropdown-btn:hover {
+            background-color: #3a5bd9;
+        }
+        
+        .language-dropdown-btn i.fa-globe {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .language-dropdown-btn i.fa-caret-down {
+            margin-left: 8px;
+            font-size: 12px;
+            transition: transform 0.3s ease;
         }
         
         .language-dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            border-radius: 4px;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            z-index: 10;
+            border-radius: 8px;
+            margin-top: 5px;
+            max-height: 320px;
+            overflow-y: auto;
         }
         
         .language-dropdown-content a {
-            color: black;
+            color: #333;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        
+        .language-dropdown-content a:last-child {
+            border-bottom: none;
         }
         
         .language-dropdown-content a:hover {
-            background-color: #f1f1f1;
+            background-color: #f8f9fa;
+            color: #4a6cf7;
         }
         
         .language-dropdown-content a.active {
-            background-color: #007bff;
+            background-color: #4a6cf7;
             color: white;
+            font-weight: 500;
         }
         
         .language-selector:hover .language-dropdown-content {
             display: block;
+        }
+        
+        .language-selector:hover .language-dropdown-btn i.fa-caret-down {
+            transform: rotate(180deg);
+        }
+        
+        /* 移动设备适配 */
+        @media (max-width: 768px) {
+            .language-selector {
+                margin-left: 0;
+                margin-right: 15px;
+                position: absolute;
+                right: 60px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .language-dropdown-btn {
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+            
+            .language-dropdown-btn i.fa-globe {
+                margin-right: 0;
+            }
+            
+            .language-dropdown-btn span {
+                display: none;
+            }
+            
+            .language-dropdown-content {
+                right: 0;
+                left: auto;
+                min-width: 160px;
+            }
+            
+            /* 移动导航打开时的样式 */
+            .nav-active .language-selector {
+                position: static;
+                margin: 15px auto;
+                transform: none;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-active .language-dropdown-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .nav-active .language-dropdown-btn i.fa-globe {
+                margin-right: 8px;
+            }
+            
+            .nav-active .language-dropdown-btn span {
+                display: inline;
+            }
+            
+            .nav-active .language-dropdown-content {
+                position: relative;
+                width: 100%;
+                margin-top: 10px;
+            }
         }
     </style>
     
     <!-- 添加简单的语言选择器JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // 语言选择器逻辑
             const langBtn = document.querySelector('.language-dropdown-btn');
             if (langBtn) {
-                langBtn.addEventListener('click', function() {
+                langBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     const content = document.querySelector('.language-dropdown-content');
                     content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                });
+                
+                // 点击其他区域关闭下拉菜单
+                document.addEventListener('click', function() {
+                    const content = document.querySelector('.language-dropdown-content');
+                    if (content && content.style.display === 'block') {
+                        content.style.display = 'none';
+                    }
+                });
+                
+                // 阻止下拉菜单内的点击事件冒泡
+                const content = document.querySelector('.language-dropdown-content');
+                if (content) {
+                    content.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                    });
+                }
+            }
+            
+            // 移动导航菜单逻辑
+            const menuToggle = document.querySelector('.menu-toggle');
+            const header = document.querySelector('header');
+            const nav = document.querySelector('nav');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    header.classList.toggle('nav-active');
+                    nav.classList.toggle('active');
+                    
+                    // 如果导航菜单打开，关闭语言选择器下拉菜单
+                    const content = document.querySelector('.language-dropdown-content');
+                    if (content && content.style.display === 'block') {
+                        content.style.display = 'none';
+                    }
                 });
             }
         });
     </script>
+    
+    <!-- 导航菜单移动设备样式 -->
+    <style>
+        header {
+            position: relative;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            header.nav-active {
+                height: auto;
+            }
+            
+            header.nav-active nav {
+                display: block;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                z-index: 100;
+                padding: 15px;
+            }
+            
+            header.nav-active nav ul.main-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            header.nav-active nav ul.main-nav li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </body>
 </html>
