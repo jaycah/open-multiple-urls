@@ -194,8 +194,13 @@
 
     <script src="/js/script.js"></script>
     <script>
-        // 初始化语言
-        const currentLocale = '<%= locale %>';
+        // 获取用户语言偏好 (先查询参数, 再查cookie, 最后查浏览器设置)
+        const queryLang = req.query.lang;
+        const cookieLang = req.cookies.preferredLanguage;
+        const browserLang = req.headers['accept-language']?.split(',')[0]?.split('-')[0];
+        
+        // 确定使用的语言
+        let userLocale = queryLang || cookieLang || browserLang || 'en';
     </script>
     
     <!-- 在CSS中添加语言选择器样式 -->
