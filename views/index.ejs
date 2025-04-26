@@ -354,30 +354,32 @@
     const delay = 300; // 设置延迟消失的时间，单位毫秒
 
     if (langBtn && langContent) {
-        langBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            langContent.style.display = langContent.style.display === 'block' ? 'none' : 'block';
-            clearTimeout(hideTimeoutId); // 点击按钮时清除隐藏定时器
-        });
-
+        // 鼠标悬停显示
         langBtn.addEventListener('mouseenter', () => {
-            clearTimeout(hideTimeoutId); // 鼠标进入按钮时清除隐藏定时器
+            clearTimeout(hideTimeoutId);
+            langContent.style.display = 'block';
         });
 
         langContent.addEventListener('mouseenter', () => {
-            clearTimeout(hideTimeoutId); // 鼠标进入下拉菜单时清除隐藏定时器
+            clearTimeout(hideTimeoutId);
         });
 
+        // 鼠标点击切换显示
+        langBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            langContent.style.display = langContent.style.display === 'block' ? 'none' : 'block';
+            clearTimeout(hideTimeoutId); // 点击时清除隐藏定时器，避免冲突
+        });
+
+        // 鼠标离开延迟隐藏
         langBtn.addEventListener('mouseleave', () => {
-            // 鼠标离开按钮时设置延迟隐藏
             hideTimeoutId = setTimeout(() => {
                 langContent.style.display = 'none';
             }, delay);
         });
 
         langContent.addEventListener('mouseleave', () => {
-            // 鼠标离开下拉菜单时设置延迟隐藏
             hideTimeoutId = setTimeout(() => {
                 langContent.style.display = 'none';
             }, delay);
@@ -391,7 +393,7 @@
             }
         });
 
-        // 阻止下拉菜单内的点击事件冒泡 (这部分代码保持不变)
+        // 阻止下拉菜单内的点击事件冒泡
         langContent.addEventListener('click', function(e) {
             e.stopPropagation();
         });
@@ -410,7 +412,7 @@
             // 如果导航菜单打开，关闭语言选择器下拉菜单
             if (langContent && langContent.style.display === 'block') {
                 langContent.style.display = 'none';
-                clearTimeout(hideTimeoutId); // 同时清除定时器
+                clearTimeout(hideTimeoutId);
             }
         });
     }
