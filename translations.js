@@ -214,7 +214,7 @@ module.exports = {
             subtitle: 'क्या आपके कोई प्रश्न या प्रतिक्रिया है? हम आपसे सुनने के लिए उत्सुक हैं!'
         },
         footer: {
-            tagline: 'URL और खोज कीवर्ड कुशलतापूर्वक खोलें',
+            tagline: 'Open URLs & Search Keywords Efficiently',
             quickLinks: 'त्वरित लिंक',
             features: 'विशेषताएं',
             howItWorks: 'यह कैसे काम करता है',
@@ -586,7 +586,7 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'การประมวลผลจำนวนมาก',
-                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
+                    description: 'ประมวลผลหลาย URL และคำสำคัญพร้อมกัน ป้อนในบรรทัดแยกกันหรือคั่นด้วยเครื่องหมายจุลภาค'
                 },
                 {
                     icon: 'fa-language',
@@ -599,20 +599,20 @@ module.exports = {
             title: 'วิธีการทำงาน',
             steps: [
                 {
-                    title: 'Masukkan Konten Anda',
-                    description: 'Ketik atau tempel URL dan kata kunci ke dalam kotak teks.'
+                    title: 'ป้อนเนื้อหาของคุณ',
+                    description: 'พิมพ์หรือวาง URL และคำค้นหาลงในกล่องข้อความ คุณสามารถป้อนทีละบรรทัดหรือคั่นด้วยเครื่องหมายจุลภาค'
                 },
                 {
-                    title: 'Klik Proses Semua',
-                    description: 'Klik tombol "Proses Semua" untuk memulai.'
+                    title: 'คลิกที่ประมวลผลทั้งหมด',
+                    description: 'คลิกปุ่ม "ประมวลผลทั้งหมด" และระบบของเราจะวิเคราะห์ข้อมูลที่คุณป้อนเพื่อระบุ URL และคำค้นหา'
                 },
                 {
-                    title: 'Pemrosesan Otomatis',
-                    description: 'URL akan dibuka langsung, kata kunci akan dicari.'
+                    title: 'การประมวลผลอัตโนมัติ',
+                    description: 'URL (ที่มีจุด) จะเปิดโดยตรงในแท็บใหม่ คำค้นหา (ไม่มีจุด) จะถูกค้นหาใน Google ในแท็บใหม่'
                 },
                 {
-                    title: 'Izinkan Pop-up',
-                    description: 'Jika browser Anda memblokir pop-up, izinkan untuk situs ini.'
+                    title: 'อนุญาตป๊อปอัพ',
+                    description: 'หากเบราว์เซอร์ของคุณบล็อกป๊อปอัพ คุณจะต้องอนุญาตป๊อปอัพสำหรับเว็บไซต์นี้ เราจะแสดงคำแนะนำวิธีการทำเช่นนี้'
                 }
             ]
         },
@@ -624,8 +624,8 @@ module.exports = {
                     answer: 'ระบบของเราได้ตรวจจับ URL โดยมองหาจุด (.) ในข้อความ'
                 },
                 {
-                    question: 'Mengapa pop-up saya diblokir?',
-                    answer: 'Sebagian besar browser modern memblokir pop-up secara default.'
+                    question: 'ทำไมป๊อปอัพของฉันจึงถูกบล็อก?',
+                    answer: 'เบราว์เซอร์สมัยใหม่ส่วนใหญ่บล็อกป๊อปอัพโดยค่าเริ่มต้นเพื่อป้องกันผู้ใช้จากเนื้อหาที่ไม่ต้องการ เนื่องจากเครื่องมือของเราจำเป็นต้องเปิดหลายแท็บ คุณจะต้องอนุญาตป๊อปอัพสำหรับเว็บไซต์ของเรา'
                 },
                 {
                     question: 'ฉันสามารถประมวลผล URL และคำค้นหาได้กี่รายการในครั้งเดียว?',
