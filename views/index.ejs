@@ -347,51 +347,74 @@
     <!-- 添加简单的语言选择器JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 语言选择器逻辑
-            const langBtn = document.querySelector('.language-dropdown-btn');
-            if (langBtn) {
-                langBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    const content = document.querySelector('.language-dropdown-content');
-                    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-                });
-                
-                // 点击其他区域关闭下拉菜单
-                document.addEventListener('click', function() {
-                    const content = document.querySelector('.language-dropdown-content');
-                    if (content && content.style.display === 'block') {
-                        content.style.display = 'none';
-                    }
-                });
-                
-                // 阻止下拉菜单内的点击事件冒泡
-                const content = document.querySelector('.language-dropdown-content');
-                if (content) {
-                    content.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                    });
-                }
-            }
-            
-            // 移动导航菜单逻辑
-            const menuToggle = document.querySelector('.menu-toggle');
-            const header = document.querySelector('header');
-            const nav = document.querySelector('nav');
-            
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    header.classList.toggle('nav-active');
-                    nav.classList.toggle('active');
-                    
-                    // 如果导航菜单打开，关闭语言选择器下拉菜单
-                    const content = document.querySelector('.language-dropdown-content');
-                    if (content && content.style.display === 'block') {
-                        content.style.display = 'none';
-                    }
-                });
+    // 语言选择器逻辑
+    const langBtn = document.querySelector('.language-dropdown-btn');
+    const langContent = document.querySelector('.language-dropdown-content');
+    let hideTimeoutId;
+    const delay = 300; // 设置延迟消失的时间，单位毫秒
+
+    if (langBtn && langContent) {
+        langBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            langContent.style.display = langContent.style.display === 'block' ? 'none' : 'block';
+            clearTimeout(hideTimeoutId); // 点击按钮时清除隐藏定时器
+        });
+
+        langBtn.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeoutId); // 鼠标进入按钮时清除隐藏定时器
+        });
+
+        langContent.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeoutId); // 鼠标进入下拉菜单时清除隐藏定时器
+        });
+
+        langBtn.addEventListener('mouseleave', () => {
+            // 鼠标离开按钮时设置延迟隐藏
+            hideTimeoutId = setTimeout(() => {
+                langContent.style.display = 'none';
+            }, delay);
+        });
+
+        langContent.addEventListener('mouseleave', () => {
+            // 鼠标离开下拉菜单时设置延迟隐藏
+            hideTimeoutId = setTimeout(() => {
+                langContent.style.display = 'none';
+            }, delay);
+        });
+
+        // 点击其他区域关闭下拉菜单
+        document.addEventListener('click', function() {
+            if (langContent.style.display === 'block') {
+                langContent.style.display = 'none';
+                clearTimeout(hideTimeoutId); // 确保点击外部时清除任何未执行的定时器
             }
         });
+
+        // 阻止下拉菜单内的点击事件冒泡 (这部分代码保持不变)
+        langContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    // 移动导航菜单逻辑 (这部分代码保持不变)
+    const menuToggle = document.querySelector('.menu-toggle');
+    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            header.classList.toggle('nav-active');
+            nav.classList.toggle('active');
+
+            // 如果导航菜单打开，关闭语言选择器下拉菜单
+            if (langContent && langContent.style.display === 'block') {
+                langContent.style.display = 'none';
+                clearTimeout(hideTimeoutId); // 同时清除定时器
+            }
+        });
+    }
+});
     </script>
     
     <!-- 导航菜单移动设备样式 -->
