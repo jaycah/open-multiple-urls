@@ -154,12 +154,12 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'बल्क प्रोसेसिंग',
-                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
+                    description: 'एक साथ कई URL और कीवर्ड को प्रोसेस करें। उन्हें अलग-अलग लाइनों में या कॉमा से अलग करके दर्ज करें।'
                 },
                 {
                     icon: 'fa-language',
-                    title: 'बहु-भाषी समर्थन',
-                    description: 'Use our tool in your preferred language with support for English, French, German, Italian, Korean, Japanese, and Chinese.'
+                    title: 'बहु-भाषा समर्थन',
+                    description: 'हमारे टूल को अपनी पसंदीदा भाषा में उपयोग करें, अंग्रेजी, फ्रेंच, जर्मन, इतालवी, कोरियाई, जापानी और चीनी के साथ।'
                 }
             ]
         },
@@ -268,12 +268,12 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'ਬਲਕ ਪ੍ਰੋਸੈਸਿੰਗ',
-                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
+                    description: 'ਇੱਕੋ ਵਾਰ ਵਿੱਚ ਕਈ URL ਅਤੇ ਕੀਵਰਡ ਪ੍ਰੋਸੈਸ ਕਰੋ। ਉਨ੍ਹਾਂ ਨੂੰ ਵੱਖ-ਵੱਖ ਲਾਈਨਾਂ ਵਿੱਚ ਜਾਂ ਕਾਮਿਆਂ ਨਾਲ ਵੱਖ ਕਰਕੇ ਦਰਜ ਕਰੋ।'
                 },
                 {
                     icon: 'fa-language',
                     title: 'ਬਹੁ-ਭਾਸ਼ਾ ਸਮਰਥਨ',
-                    description: 'Use our tool in your preferred language with support for English, French, German, Italian, Korean, Japanese, and Chinese.'
+                    description: 'ਸਾਡੇ ਟੂਲ ਨੂੰ ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਵਿੱਚ ਵਰਤੋ, ਅੰਗਰੇਜ਼ੀ, ਫਰਾਂਸੀਸੀ, ਜਰਮਨ, ਇਤਾਲਵੀ, ਕੋਰੀਆਈ, ਜਾਪਾਨੀ ਅਤੇ ਚੀਨੀ ਦੇ ਸਮਰਥਨ ਨਾਲ।'
                 }
             ]
         },
@@ -373,13 +373,13 @@ module.exports = {
                 },
                 {
                     icon: 'fa-list',
-                    title: 'বল্ক প্রক্রিয়াকরণ',
-                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
+                    title: 'বাল্ক প্রসেসিং',
+                    description: 'একসাথে অনেক URL এবং কীওয়ার্ড প্রসেস করুন। সেগুলি আলাদা লাইনে বা কমা দিয়ে আলাদা করে লিখুন।'
                 },
                 {
                     icon: 'fa-language',
                     title: 'বহু-ভাষা সমর্থন',
-                    description: 'Use our tool in your preferred language with support for English, French, German, Italian, Korean, Japanese, and Chinese.'
+                    description: 'আমাদের টুল ব্যবহার করুন আপনার পছন্দের ভাষায়, ইংরেজি, ফরাসি, জার্মান, ইতালীয়, কোরিয়ান, জাপানি এবং চীনা ভাষার সমর্থন সহ।'
                 }
             ]
         },
@@ -480,12 +480,12 @@ module.exports = {
                 {
                     icon: 'fa-list',
                     title: 'Pemrosesan Massal',
-                    description: 'Process multiple URLs and keywords at once. Enter them on separate lines or separate with commas.'
+                    description: 'Proses beberapa URL dan kata kunci sekaligus. Masukkan dalam baris terpisah atau pisahkan dengan koma.'
                 },
                 {
                     icon: 'fa-language',
                     title: 'Dukungan Multi Bahasa',
-                    description: 'Gunakan alat kami dalam bahasa pilihan Anda.'
+                    description: 'Gunakan alat kami dalam bahasa pilihan Anda dengan dukungan untuk Bahasa Inggris, Prancis, Jerman, Italia, Korea, Jepang, dan Mandarin.'
                 }
             ]
         },
